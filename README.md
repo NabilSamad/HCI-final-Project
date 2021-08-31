@@ -1,21 +1,29 @@
-# HCI-final-projet
-Smile detection app
+# DRTFace
 
-How to run ?
+[![License](https://img.shields.io/badge/license-BSD%203--Clause-green.svg)](License.txt)
+[![CodeFactor](https://www.codefactor.io/repository/github/project-10/drtface/badge)](https://www.codefactor.io/repository/github/project-10/drtface)
+[![Build status](https://ci.appveyor.com/api/projects/status/lpyxixb9utmwaur3?svg=true)](https://ci.appveyor.com/project/Creator/drtface)
 
-Dependencies
+[Detect | Recognize | Track] Face
 
-1)Opencv2
+# Run Model
 
-2)DRTfacelibrary
+` cd model `
 
-3)Cmake
+` ./build.sh `
 
+# Run Application
 
-step 1: Fork the repository
+` mkdir build && cd build`
 
-step 2: Create a project in the DRTFace-master\demos\ with Cmake
+` cmake .. -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local `
 
-step 3: Open the generated project with visual studio
+` make `
 
-step 4: Build the project
+` cd bin `
+
+` ./Demo\ Core `
+
+## Note:
+
+If running demo core ends in segmention fault, check that the datPath in include/drtface.h is correct, relative to bin.
